@@ -48,7 +48,7 @@ public class Pion {
         Pion poin5 = new Pion('B');
         Pion poin6 = new Pion('N');
         
-        System.out.println(getCouleur.pion1());
+      
 
         
     }
