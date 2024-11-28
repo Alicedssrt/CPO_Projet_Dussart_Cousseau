@@ -15,6 +15,9 @@ public class Projet_Dussart_Cousseau {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        testMasterMind test = new testMasterMind();
+        test.testPion();
+        test.testCombinaison();
     }
     
 }
