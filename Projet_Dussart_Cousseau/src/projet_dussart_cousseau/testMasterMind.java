@@ -22,7 +22,7 @@ public class testMasterMind {
        
         Combinaison combi = new Combinaison(4);
         combi.genererAleatoire(4, couleursDisponibles);
-        System.out.println("combinaison aleatoire de 4 couleurs : "+ combi.toString());
+        System.out.println("Combinaison aleatoire de 4 couleurs : "+ combi.toString());
     }
     
     public static void testPion() {
