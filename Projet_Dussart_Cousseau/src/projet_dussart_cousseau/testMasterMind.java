@@ -15,22 +15,22 @@ public class testMasterMind {
     
     ArrayList<Character> couleursDisponibles = new ArrayList<>();
     public testMasterMind(){
-    couleursDisponibles.add('R');
-    couleursDisponibles.add('G');
-    couleursDisponibles.add('B');
-    couleursDisponibles.add('Y');
-}
+        couleursDisponibles.add('R');
+        couleursDisponibles.add('G');
+        couleursDisponibles.add('B');
+        couleursDisponibles.add('Y');
+    }
        
     public void testComparer(){
-    Pion[] tabPion1 = {new Pion('R'),new Pion('B'),new Pion('G'),new Pion('Y')};
+    Pion[] tabPion1 = {new Pion('R'),new Pion('G'),new Pion('B'),new Pion('Y')};
  
     Combinaison c1 = new Combinaison(tabPion1);
     Combinaison c2 = new Combinaison(4);
     c2.genererAleatoire(4,couleursDisponibles);
 
     int[] reponses = c1.comparer(c2);
-    System.out.println("tableau choisi : "+ c1);
-    System.out.println("tableau aleatoire : "+ c2);
+    System.out.println("combinaison choisie : "+ c1);
+    System.out.println("combinaison aleatoire : "+ c2);
 
     System.out.println("resultats (bien places, mal places) : " + Arrays.toString(reponses)); 
     
