@@ -5,6 +5,7 @@
 package projet_dussart_cousseau;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -12,20 +13,36 @@ import java.util.ArrayList;
  */
 public class testMasterMind {
     
-    public static void testCombinaison(){
-        ArrayList<Character> couleursDisponibles = new ArrayList<>();
-        couleursDisponibles.add('R');
-        couleursDisponibles.add('V');
-        couleursDisponibles.add('B');
-        couleursDisponibles.add('Y');
+    ArrayList<Character> couleursDisponibles = new ArrayList<>();
+    public testMasterMind(){
+    couleursDisponibles.add('R');
+    couleursDisponibles.add('G');
+    couleursDisponibles.add('B');
+    couleursDisponibles.add('Y');
+}
        
-       
+    public void testComparer(){
+    Pion[] tabPion1 = {new Pion('R'),new Pion('B'),new Pion('G'),new Pion('Y')};
+ 
+    Combinaison c1 = new Combinaison(tabPion1);
+    Combinaison c2 = new Combinaison(4);
+    c2.genererAleatoire(4,couleursDisponibles);
+
+    int[] reponses = c1.comparer(c2);
+    System.out.println("tableau choisi : "+ c1);
+    System.out.println("tableau aleatoire : "+ c2);
+
+    System.out.println("resultats (bien places, mal places) : " + Arrays.toString(reponses)); 
+    
+
+    }    
+    public void testCombinaison(){
         Combinaison combi = new Combinaison(4);
         combi.genererAleatoire(4, couleursDisponibles);
         System.out.println("Combinaison aleatoire de 4 couleurs : "+ combi.toString());
     }
     
-    public static void testPion() {
+    public void testPion() {
         
                
     Pion pionRouge = new Pion('R');//red
