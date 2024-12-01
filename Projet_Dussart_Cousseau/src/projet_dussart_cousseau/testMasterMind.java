@@ -65,4 +65,117 @@ public class testMasterMind {
     System.out.println("Affichage du pion jaune : " + pionJaune);
     }
 
+
+
+    public static void main(String[] args) {
+        System.out.println("=== Tests PlateauDeJeu ===");
+
+        testInitialisationPlateau();
+        testProposerCombinaison();
+        testVictoire();
+        testDefaite();
+        testAfficherPlateau();
+    }
+
+    private static void testInitialisationPlateau() {
+        System.out.println("\nTest 1 : Initialisation du plateau");
+        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        PlateauDeJeu plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+
+        if (plateau == null) {
+            System.out.println("Échec : Le plateau ne doit pas être null après initialisation.");
+        } else {
+            System.out.println("Succès : Plateau initialisé correctement.");
+        }
+    }
+
+    private static void testProposerCombinaison() {
+        System.out.println("\nTest 2 : Proposer une combinaison");
+        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        PlateauDeJeu plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+
+        Combinaison tentative = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('Y'), new Pion('G')
+        });
+
+        plateau.proposerCombinaison(tentative);
+
+        if (plateau.estVictoire()) {
+            System.out.println("Échec : Le joueur ne devrait pas gagner pour cette tentative.");
+        } else {
+            System.out.println("Succès : La combinaison a été ajoutée correctement.");
+        }
+    }
+
+    private static void testVictoire() {
+        System.out.println("\nTest 3 : Condition de victoire");
+        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        PlateauDeJeu plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+
+        Combinaison tentative = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        plateau.proposerCombinaison(tentative);
+
+        if (plateau.estVictoire()) {
+            System.out.println("Succès : Victoire détectée correctement.");
+        } else {
+            System.out.println("Échec : La victoire n'a pas été détectée.");
+        }
+    }
+
+    private static void testDefaite() {
+        System.out.println("\nTest 4 : Condition de défaite");
+        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        PlateauDeJeu plateau = new PlateauDeJeu(combinaisonSecrete, 1);
+
+        Combinaison tentative = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('G'), new Pion('B'), new Pion('Y')
+        });
+
+        plateau.proposerCombinaison(tentative);
+
+        if (plateau.estDefaite()) {
+            System.out.println("Succès : Défaite détectée correctement.");
+        } else {
+            System.out.println("Échec : La défaite n'a pas été détectée.");
+        }
+    }
+
+    private static void testAfficherPlateau() {
+        System.out.println("\nTest 5 : Affichage du plateau");
+        Combinaison combinaisonSecrete = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        PlateauDeJeu plateau;
+        plateau = new PlateauDeJeu(combinaisonSecrete, 10);
+
+        Combinaison tentative1 = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('G'), new Pion('B'), new Pion('Y')
+        });
+
+        Combinaison tentative2 = new Combinaison(new Pion[]{
+            new Pion('R'), new Pion('B'), new Pion('G'), new Pion('Y')
+        });
+
+        plateau.proposerCombinaison(tentative1);
+        plateau.proposerCombinaison(tentative2);
+
+        System.out.println("Affichage attendu :");
+        plateau.afficherPlateau();
+    }
 }
