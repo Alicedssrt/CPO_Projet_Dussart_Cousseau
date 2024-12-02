@@ -18,8 +18,8 @@ public class Projet_Dussart_Cousseau {
         testMasterMind test = new testMasterMind();
         //test.testPion();
         //test.testCombinaison();
-        test.testComparer();
-       
+        //test.testComparer();
+       test.testPlateauDeJeu();
     }
     
 }

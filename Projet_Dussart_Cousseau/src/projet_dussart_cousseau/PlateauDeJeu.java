@@ -14,7 +14,7 @@ public class PlateauDeJeu {
     Combinaison combinaisonSecrete;
     ArrayList <Combinaison> tentatives;
     ArrayList <String> reponses;
-    int nbToursMax;
+    int nbToursMax=12;
 
     public PlateauDeJeu(Combinaison combinaisonSecrete, int nbToursMax) {
         this.combinaisonSecrete = combinaisonSecrete;
