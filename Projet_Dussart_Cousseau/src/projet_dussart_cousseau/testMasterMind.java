@@ -67,7 +67,7 @@ public class testMasterMind {
 
 
 
-      public void testPlateauDeJeu() {
+    public void testPlateauDeJeu() {
   
     Pion[] pionsSecrete = {new Pion('R'), new Pion('G'), new Pion('B'), new Pion('Y')};
     Combinaison combinaisonSecrete = new Combinaison(pionsSecrete);
@@ -88,4 +88,25 @@ public class testMasterMind {
     System.out.println("Victoire ? " + plateau.estVictoire());
     System.out.println("Défaite ? " + plateau.estDefaite() + "\n");
   }
+
+
+
+
+    public void testPartie() {
+        System.out.println("=== Lancement d'une partie complète ===");
+        int tailleCombinaison = 4;
+        int nbToursMax = 10;
+
+        Partie partie = new Partie(tailleCombinaison, nbToursMax, couleursDisponibles);
+
+        partie.afficherRegles();
+
+        partie.lancerPartie();
+
+        partie.terminerPartie();
+    }
 }
+ 
+    
+    
+    

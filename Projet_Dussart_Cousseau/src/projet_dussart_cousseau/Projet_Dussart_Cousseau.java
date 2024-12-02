@@ -19,7 +19,8 @@ public class Projet_Dussart_Cousseau {
         //test.testPion();
         //test.testCombinaison();
         //test.testComparer();
-       test.testPlateauDeJeu();
+        //test.testPlateauDeJeu();
+        test.testPartie();
     }
     
 }
