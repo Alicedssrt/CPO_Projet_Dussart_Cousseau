@@ -58,6 +58,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         Choixlongeur = new javax.swing.JComboBox<>();
         BoutonJouer = new javax.swing.JButton();
         PlateauJeux = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -148,7 +155,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(ConfigJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 100));
 
-        PlateauJeux.setBackground(new java.awt.Color(0, 242, 0));
+        PlateauJeux.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout PlateauJeuxLayout = new javax.swing.GroupLayout(PlateauJeux);
         PlateauJeux.setLayout(PlateauJeuxLayout);
@@ -162,6 +169,27 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         );
 
         getContentPane().add(PlateauJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 150, 290));
+
+        jLabel4.setText("Règles du jeu :");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, 20));
+
+        jLabel5.setText("1. Devinez la combinaison secrète de couleurs.");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, 20));
+
+        jLabel6.setText("2. Vous recevrez des indices ");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, -1, 20));
+
+        jLabel7.setText("   - Nombre de pions bien placés (noirs).");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, 20));
+
+        jLabel8.setText("   - Nombre de pions corrects mais mal placés (blancs).");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, 20));
+
+        jLabel9.setText("3. Vous avez un nombre limité de tentatives.");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        jLabel10.setText("Bonne chance !");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -372,8 +400,15 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JPanel ConfigJeux;
     private javax.swing.JPanel PlateauJeux;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
 

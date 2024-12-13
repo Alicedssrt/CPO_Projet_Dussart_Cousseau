@@ -81,7 +81,6 @@ public class Partie {
             System.out.println("Félicitations ! Vous avez trouvé la combinaison secrète.");
         } else {
             System.out.println("Dommage ! Vous avez épuisé toutes vos tentatives.");
-            System.out.println("La combinaison secrète était : " + plateau.combinaisonSecrete);
         }
     }
 }
