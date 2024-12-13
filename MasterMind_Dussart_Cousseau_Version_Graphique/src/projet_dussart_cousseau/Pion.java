@@ -26,7 +26,7 @@ public class Pion {
   
    @Override 
     public String toString() {
-        return couleur.toString();
+        return "*";
     }
 }
  

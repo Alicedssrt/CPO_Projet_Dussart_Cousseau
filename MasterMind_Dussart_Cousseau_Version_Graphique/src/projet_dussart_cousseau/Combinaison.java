@@ -67,14 +67,14 @@ public class Combinaison {
         
     
     @Override
-    public String toString() {
-        
-        String txt="";
-        for (int i=0; i<elements.length;i++)
-            txt += elements[i].toString();
-        
-        return txt;
+public String toString() {
+    String txt = "";
+    for (int i = 0; i < elements.length; i++) {
+        txt += "*"; // Remplacer la couleur par un caractère générique (ex: étoile)
     }
+    return txt;
+}
+
 }     
     
 
