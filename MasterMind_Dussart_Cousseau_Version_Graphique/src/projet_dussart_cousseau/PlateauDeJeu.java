@@ -21,6 +21,7 @@ public class PlateauDeJeu {
     ArrayList<Character> couleursDisponibles;
     int nbToursMax=12;
     int longeurCombi=4;
+    boolean affichereponse =false;
 
     public PlateauDeJeu( ArrayList couleursDispo, Combinaison combinaisonSecrete, int nbToursMax, int longueurCombi) {
         this.couleursDisponibles = couleursDispo;
@@ -32,6 +33,8 @@ public class PlateauDeJeu {
         this.reponses = new ArrayList<>();
         this.réponsesbienplace = new ArrayList<>();
         this.réponsesmalplace = new ArrayList<>();
+        affichereponse=false;
+        
     }
     
         public PlateauDeJeu(Combinaison combinaisonSecrete, int nbToursMax) {
@@ -39,6 +42,8 @@ public class PlateauDeJeu {
         this.nbToursMax = nbToursMax;
         this.tentatives = new ArrayList<>();
         this.reponses = new ArrayList<>();
+        affichereponse=false;
+
     }
         
         

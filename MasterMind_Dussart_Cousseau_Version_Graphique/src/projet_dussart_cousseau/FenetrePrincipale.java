@@ -57,7 +57,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Choixlongeur = new javax.swing.JComboBox<>();
         BoutonJouer = new javax.swing.JButton();
-        PlateauJeux = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -65,6 +64,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        PlateauJeux = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 51));
@@ -113,6 +113,20 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Règles du jeu :");
+
+        jLabel5.setText("1. Devinez la combinaison secrète de couleurs.");
+
+        jLabel6.setText("2. Vous recevrez des indices ");
+
+        jLabel7.setText("   - Nombre de pions bien placés (noirs).");
+
+        jLabel8.setText("   - Nombre de pions corrects mais mal placés (blancs).");
+
+        jLabel9.setText("3. Vous avez un nombre limité de tentatives.");
+
+        jLabel10.setText("Bonne chance !");
+
         javax.swing.GroupLayout ConfigJeuxLayout = new javax.swing.GroupLayout(ConfigJeux);
         ConfigJeux.setLayout(ConfigJeuxLayout);
         ConfigJeuxLayout.setHorizontalGroup(
@@ -129,15 +143,27 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     .addComponent(ChoixNbEssais, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ChoixNbCouleur, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BoutonJouer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(BoutonJouer, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))))
+                .addContainerGap())
         );
         ConfigJeuxLayout.setVerticalGroup(
             ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConfigJeuxLayout.createSequentialGroup()
-                .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BoutonJouer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
                         .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(ChoixNbCouleur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -148,12 +174,31 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(Choixlongeur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 13, Short.MAX_VALUE)))
-                .addGap(9, 9, 9))
+                            .addComponent(Choixlongeur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(ConfigJeuxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                                .addComponent(BoutonJouer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(1, 1, 1))
+                            .addGroup(ConfigJeuxLayout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jLabel9)
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel10)))))
+                .addGap(18, 18, 18))
         );
 
-        getContentPane().add(ConfigJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 100));
+        getContentPane().add(ConfigJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 580, 190));
 
         PlateauJeux.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -168,28 +213,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             .addGap(0, 290, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PlateauJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 150, 290));
-
-        jLabel4.setText("Règles du jeu :");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, 20));
-
-        jLabel5.setText("1. Devinez la combinaison secrète de couleurs.");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, 20));
-
-        jLabel6.setText("2. Vous recevrez des indices ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, -1, 20));
-
-        jLabel7.setText("   - Nombre de pions bien placés (noirs).");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, 20));
-
-        jLabel8.setText("   - Nombre de pions corrects mais mal placés (blancs).");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, 20));
-
-        jLabel9.setText("3. Vous avez un nombre limité de tentatives.");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
-
-        jLabel10.setText("Bonne chance !");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        getContentPane().add(PlateauJeux, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 150, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -376,15 +400,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         
         if (Plateau.estVictoire() == true)
         {
+            Plateau.affichereponse = true;
             JeuEncours = false;
             FenetreVictoire f = new FenetreVictoire() ;
+            f.setDefaultCloseOperation(FenetreVictoire.DISPOSE_ON_CLOSE);
             f.setVisible(true) ;
         }
         
         if (Plateau.estDefaite() == true)
             {
+                 Plateau.affichereponse = true;
                 JeuEncours = false;
                 FenetreVictoire f = new FenetreVictoire() ;
+                 f.setDefaultCloseOperation(FenetreDefaite.DISPOSE_ON_CLOSE);
                 f.setVisible(true) ;
             }
             
