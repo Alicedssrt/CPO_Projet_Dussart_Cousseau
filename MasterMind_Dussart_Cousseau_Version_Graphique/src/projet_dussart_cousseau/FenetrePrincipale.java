@@ -381,6 +381,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
       private void clickposition(int ligne,int col) {
         
+        if (JeuEncours == false)
+            return;
         int size = Plateau.tentatives.size();
         Pion pion;
         Character coul;

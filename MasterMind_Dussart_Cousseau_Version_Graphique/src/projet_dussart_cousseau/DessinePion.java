@@ -51,7 +51,7 @@ public class DessinePion extends JButton {
      
      switch (type) {
          case 1:
-             if ((size == essai-1) && (size< plateau.nbToursMax))
+             if ((size == essai-1) && (size< plateau.nbToursMax) && (plateau.affichereponse == false))
              {
                 g.setColor(GetColorEncours());
                 g.fillOval(4, 4, 22, 22);
@@ -68,6 +68,7 @@ public class DessinePion extends JButton {
              
              break;
          case 2: //bouton validation
+             if (plateau.affichereponse == false)
              if (size == essai-1){
                 g.setColor(Color.black);
                 g.drawString("V", 15, 20);
@@ -92,9 +93,18 @@ public class DessinePion extends JButton {
              
              break;
          case 4:
-             g.setColor(GetColorCombiSecrete());
-             g.fillOval(2, 2, 26, 26);
-             g.drawString("?", 12, 20);
+             if (plateau.affichereponse == true)
+             {
+                g.setColor(GetColorCombiSecrete());
+                g.fillOval(4, 4, 22, 22);
+                g.drawString("?", 12, 20);
+             }
+             else
+             {
+                 g.setColor(Color.black);
+                g.drawOval(4, 4, 22, 22);
+                g.drawString("?", 12, 20); 
+             }
              break;
          default:
              break;

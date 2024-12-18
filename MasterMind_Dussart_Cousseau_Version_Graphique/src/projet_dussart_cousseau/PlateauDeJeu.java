@@ -26,7 +26,7 @@ public class PlateauDeJeu {
     public PlateauDeJeu( ArrayList couleursDispo, Combinaison combinaisonSecrete, int nbToursMax, int longueurCombi) {
         this.couleursDisponibles = couleursDispo;
         this.combinaisonSecrete = combinaisonSecrete;
-        this.combiEnCours = new Combinaison(4);
+        this.combiEnCours = new Combinaison(longueurCombi);
         this.nbToursMax = nbToursMax;
         this.longeurCombi = longueurCombi;
         this.tentatives = new ArrayList<>();
